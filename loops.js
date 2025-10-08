@@ -20,41 +20,125 @@ function sumArray(arr){
 }
 
 function meanArray(arr){
+    
+    let total = 0;               
+    for (let val of arr) {       
+        total += val;
+    }
+    return total / arr.length;   
 }
+
+
 
 function doubleArray(arr){
+    let result = [];                  
+    for (let val of arr) {            
+        result.push(val * 2);         
+    }
+    return result;                    
 }
 
+
 function squareArray(arr){
+     let result = [];                   
+    for (let val of arr) {           
+        result.push(val * val);       
+    }
+    return result;   
 }
 
 function minValue(arr){
+     let min = arr[0];
+    for (let val of arr){
+        if (val < min){
+            min = val;
+        }
+    }
+    return min;
 }
 
 function maxValue(arr){
+    let max = arr[0];
+    for (let val of arr){
+        if (val > max){
+            max = val;
+        }
+    }
+    return max;
 }
 
 function countEvens(arr){
+      let count = 0;
+    for (let val of arr){
+        if (val % 2 === 0){
+            count++;
+        }
+    }
+    return count;
 }
 
 function countPositives(arr){
+    let count = 0;
+    for (let val of arr){
+        if (val > 0){
+            count++;
+        }
+    }
+    return count;
 }
 
 function filterOdds(arr){
+    let oddNumbers = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 !== 0) {
+            oddNumbers.push(arr[i]);
+        }
+    }
+    return oddNumbers;
 }
 
 function filterNegatives(arr){
+    let negatives = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            negatives.push(arr[i]);
+        }
+    }
+    return negatives;
 }
 
 function negativeExists(arr){
+     for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            return true;
+        }
+    }
+    return false;
 }
 
 function firstEvenNumber(arr){
+     for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            return arr[i];
+        }
+    }
+    return null;
 }
 
 function allElementsPositive(arr){
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] <= 0) {
+            return false;
+        }
+    }
+    return true;
 }
 
 function allElementsDefined(arr){
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === undefined || arr[i] === null || arr[i] === "") {
+            return false;
+        }
+    }
+    return true;
 }
-
